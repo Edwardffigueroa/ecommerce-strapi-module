@@ -47,6 +47,14 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "GET",
+      "path": "/products/:_id/build",
+      "handler": "Products.build",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }
