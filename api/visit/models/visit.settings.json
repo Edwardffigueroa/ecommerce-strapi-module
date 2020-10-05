@@ -1,0 +1,16 @@
+{
+  "kind": "singleType",
+  "collectionName": "visits",
+  "info": {
+    "name": "Visit"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "HeroTitle1": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_main_components_hero_texts",
+  "info": {
+    "name": "hero_text",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "section_name": {
+      "type": "string"
+    },
+    "title_1": {
+      "type": "string"
+    },
+    "title_2": {
+      "type": "string"
+    },
+    "title_3": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "button_name": {
+      "type": "string"
+    },
+    "button_route": {
+      "type": "string"
+    },
+    "background_hero": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

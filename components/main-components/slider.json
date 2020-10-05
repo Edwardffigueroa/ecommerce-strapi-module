@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_main_components_sliders",
+  "info": {
+    "name": "Slider",
+    "icon": "arrows-alt-h"
+  },
+  "options": {},
+  "attributes": {
+    "abbreviation": {
+      "type": "string"
+    },
+    "Navigation": {
+      "type": "component",
+      "repeatable": true,
+      "component": "child-components.navigation-item"
+    },
+    "slider_navigation": {
+      "type": "component",
+      "repeatable": true,
+      "component": "child-components.slide"
+    },
+    "hero": {
+      "type": "component",
+      "repeatable": true,
+      "component": "main-components.hero-text"
+    }
+  }
+}

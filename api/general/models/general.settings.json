@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "generals",
+  "info": {
+    "name": "General"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "component_name": {
+      "type": "string"
+    },
+    "languages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "main-components.slider"
+    }
+  }
+}

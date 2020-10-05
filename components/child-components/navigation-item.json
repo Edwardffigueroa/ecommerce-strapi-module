@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_child_components_navigation_items",
+  "info": {
+    "name": "navigation-item",
+    "icon": "bars"
+  },
+  "options": {},
+  "attributes": {
+    "option": {
+      "type": "string"
+    },
+    "route": {
+      "type": "string"
+    }
+  }
+}

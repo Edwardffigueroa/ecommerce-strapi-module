@@ -1,0 +1,43 @@
+{
+  "kind": "singleType",
+  "collectionName": "histories",
+  "info": {
+    "name": "History"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "HeroTitle1": {
+      "type": "string"
+    },
+    "HeroDescription": {
+      "type": "richtext"
+    },
+    "HeroButton": {
+      "type": "string"
+    },
+    "Background": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "HeroTitle2": {
+      "type": "string"
+    },
+    "HeroTitle3": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "dynamiczone",
+      "components": [
+        "main-components.slider"
+      ]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_child_components_slides",
+  "info": {
+    "name": "Slide",
+    "icon": "image"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "route": {
+      "type": "string"
+    }
+  }
+}
