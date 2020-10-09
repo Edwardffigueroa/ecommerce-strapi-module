@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_main_components_contents",
+  "info": {
+    "name": "Content",
+    "icon": "align-left"
+  },
+  "options": {},
+  "attributes": {
+    "abbreviation": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    },
+    "Travels": {
+      "type": "component",
+      "repeatable": true,
+      "component": "main-components.visit-detail"
+    }
+  }
+}

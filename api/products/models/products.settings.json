@@ -16,7 +16,9 @@
       "type": "string"
     },
     "price": {
-      "type": "decimal"
+      "type": "decimal",
+      "min": 0,
+      "default": 0
     },
     "images": {
       "collection": "file",
@@ -30,16 +32,38 @@
       "required": false
     },
     "sale": {
-      "type": "decimal"
+      "type": "decimal",
+      "default": 0,
+      "min": 0
     },
     "stock": {
       "type": "integer"
     },
-    "options": {
-      "type": "json"
-    },
     "description": {
       "type": "richtext"
+    },
+    "Product_variation": {
+      "type": "component",
+      "repeatable": true,
+      "component": "main-components.product-variation"
+    },
+    "price_text": {
+      "type": "string",
+      "default": "Price Unit"
+    },
+    "features": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "available": {
+      "type": "boolean",
+      "default": true,
+      "required": true
     }
   }
 }

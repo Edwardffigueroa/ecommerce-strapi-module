@@ -1,8 +1,8 @@
 {
   "collectionName": "components_main_components_sliders",
   "info": {
-    "name": "Slider",
-    "icon": "arrows-alt-h"
+    "name": "General content",
+    "icon": "align-justify"
   },
   "options": {},
   "attributes": {
@@ -23,6 +23,9 @@
       "type": "component",
       "repeatable": true,
       "component": "main-components.hero-text"
+    },
+    "language": {
+      "type": "string"
     }
   }
 }

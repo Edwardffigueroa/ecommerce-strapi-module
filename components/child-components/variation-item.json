@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_child_components_variation_items",
+  "info": {
+    "name": "Variation_item",
+    "icon": "check-square"
+  },
+  "options": {},
+  "attributes": {
+    "Value": {
+      "type": "string"
+    }
+  }
+}

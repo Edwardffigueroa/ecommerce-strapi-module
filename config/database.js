@@ -12,7 +12,9 @@ module.exports = ({ env }) => ({
         password: env('DATABASE_PASSWORD', '123456789'),
         ssl: env.bool('DATABASE_SSL', false),
       },
-      options: {}
+      options: {
+        strict: 'true'
+      }
     },
   },
 });

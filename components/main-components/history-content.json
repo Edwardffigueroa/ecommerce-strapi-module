@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_main_components_history_contents",
+  "info": {
+    "name": "History content",
+    "icon": "file-contract"
+  },
+  "options": {},
+  "attributes": {
+    "abbreviation": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "component",
+      "repeatable": false,
+      "component": "main-components.history-detail"
+    }
+  }
+}

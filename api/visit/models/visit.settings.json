@@ -9,8 +9,13 @@
     "timestamps": true
   },
   "attributes": {
-    "HeroTitle1": {
+    "component_name": {
       "type": "string"
+    },
+    "Content": {
+      "type": "component",
+      "repeatable": true,
+      "component": "main-components.content"
     }
   }
 }

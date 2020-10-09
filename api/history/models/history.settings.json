@@ -9,35 +9,13 @@
     "timestamps": true
   },
   "attributes": {
-    "HeroTitle1": {
+    "component_name": {
       "type": "string"
     },
-    "HeroDescription": {
-      "type": "richtext"
-    },
-    "HeroButton": {
-      "type": "string"
-    },
-    "Background": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
-      "required": false
-    },
-    "HeroTitle2": {
-      "type": "string"
-    },
-    "HeroTitle3": {
-      "type": "string"
-    },
-    "Content": {
-      "type": "dynamiczone",
-      "components": [
-        "main-components.slider"
-      ]
+    "Contents": {
+      "type": "component",
+      "repeatable": true,
+      "component": "main-components.history-content"
     }
   }
 }

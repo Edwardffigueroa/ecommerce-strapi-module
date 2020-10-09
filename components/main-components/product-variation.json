@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_main_components_product_variations",
+  "info": {
+    "name": "Product_variation",
+    "icon": "sitemap"
+  },
+  "options": {},
+  "attributes": {
+    "variation_name": {
+      "type": "string"
+    },
+    "Variation_item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "child-components.variation-item"
+    }
+  }
+}
