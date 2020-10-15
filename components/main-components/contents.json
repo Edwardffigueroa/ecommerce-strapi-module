@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_main_components_contents",
+  "info": {
+    "name": "Contents",
+    "icon": "language"
+  },
+  "options": {},
+  "attributes": {
+    "abbreviation": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    },
+    "Checkout_detail": {
+      "type": "component",
+      "repeatable": false,
+      "component": "main-components.checkout-detail"
+    }
+  }
+}

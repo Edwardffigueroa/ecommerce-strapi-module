@@ -1,25 +1,25 @@
 {
-  "collectionName": "components_main_components_history_details",
+  "collectionName": "components_main_components_boutique_details",
   "info": {
-    "name": "History detail",
-    "icon": "archway"
+    "name": "Boutique Detail",
+    "icon": "store"
   },
   "options": {},
   "attributes": {
-    "title1": {
+    "price_text": {
       "type": "string"
     },
-    "title2": {
+    "add_to_card_button": {
       "type": "string"
     },
-    "title3": {
+    "continue_button": {
       "type": "string"
     },
-    "body": {
-      "type": "richtext"
+    "continue_button_route": {
+      "type": "string"
     },
-    "image": {
-      "model": "file",
+    "clothing_features": {
+      "collection": "file",
       "via": "related",
       "allowedTypes": [
         "images"
@@ -27,13 +27,14 @@
       "plugin": "upload",
       "required": false
     },
-    "background_image": {
+    "currency": {
+      "type": "string"
+    },
+    "Background_image": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
-        "images",
-        "files",
-        "videos"
+        "images"
       ],
       "plugin": "upload",
       "required": false

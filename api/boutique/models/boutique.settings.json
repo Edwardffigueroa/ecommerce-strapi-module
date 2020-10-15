@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "boutiques",
+  "info": {
+    "name": "Boutique"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "component_name": {
+      "type": "string"
+    },
+    "Boutique_content": {
+      "type": "component",
+      "repeatable": true,
+      "component": "child-components.boutique-content"
+    }
+  }
+}

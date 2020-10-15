@@ -6,13 +6,16 @@
   },
   "options": {},
   "attributes": {
-    "variation_name": {
+    "variation_name_en": {
       "type": "string"
     },
     "Variation_item": {
       "type": "component",
       "repeatable": true,
       "component": "child-components.variation-item"
+    },
+    "variation_name_fr": {
+      "type": "string"
     }
   }
 }

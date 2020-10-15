@@ -9,7 +9,7 @@
     "timestamps": true
   },
   "attributes": {
-    "name": {
+    "name_en": {
       "type": "string"
     },
     "slug": {
@@ -39,7 +39,7 @@
     "stock": {
       "type": "integer"
     },
-    "description": {
+    "description_en": {
       "type": "richtext"
     },
     "Product_variation": {
@@ -47,23 +47,16 @@
       "repeatable": true,
       "component": "main-components.product-variation"
     },
-    "price_text": {
-      "type": "string",
-      "default": "Price Unit"
-    },
-    "features": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
-      "required": false
-    },
     "available": {
       "type": "boolean",
       "default": true,
       "required": true
+    },
+    "name_fr": {
+      "type": "string"
+    },
+    "description_fr": {
+      "type": "richtext"
     }
   }
 }

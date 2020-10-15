@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_child_components_boutique_contents",
+  "info": {
+    "name": "Boutique Content",
+    "icon": "align-center"
+  },
+  "options": {},
+  "attributes": {
+    "abbreviation": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    },
+    "Boutique_detail": {
+      "type": "component",
+      "repeatable": false,
+      "component": "main-components.boutique-detail"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/boutique",
+      "handler": "boutique.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/boutique",
+      "handler": "boutique.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/boutique",
+      "handler": "boutique.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

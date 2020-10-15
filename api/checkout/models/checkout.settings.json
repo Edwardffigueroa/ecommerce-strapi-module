@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "checkouts",
+  "info": {
+    "name": "Checkout"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "component_name": {
+      "type": "string"
+    },
+    "Contents": {
+      "type": "component",
+      "repeatable": true,
+      "component": "main-components.contents"
+    }
+  }
+}

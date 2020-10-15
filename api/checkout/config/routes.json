@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/checkout",
+      "handler": "checkout.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/checkout",
+      "handler": "checkout.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/checkout",
+      "handler": "checkout.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

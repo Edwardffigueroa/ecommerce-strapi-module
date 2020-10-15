@@ -1,0 +1,106 @@
+{
+  "collectionName": "components_main_components_checkout_details",
+  "info": {
+    "name": "Checkout Detail",
+    "icon": "flag-checkered"
+  },
+  "options": {},
+  "attributes": {
+    "order_details_button": {
+      "type": "string"
+    },
+    "order_approved_title": {
+      "type": "string"
+    },
+    "order_decline_description": {
+      "type": "richtext"
+    },
+    "personal_information_address": {
+      "type": "string"
+    },
+    "payment_number": {
+      "type": "string"
+    },
+    "order_back_button_route": {
+      "type": "string"
+    },
+    "payment_name": {
+      "type": "string"
+    },
+    "personal_information_button": {
+      "type": "string"
+    },
+    "order_approved_description": {
+      "type": "richtext"
+    },
+    "order_details_address": {
+      "type": "string"
+    },
+    "payment_code": {
+      "type": "string"
+    },
+    "personal_information_title": {
+      "type": "string"
+    },
+    "payment_expiration": {
+      "type": "string"
+    },
+    "subtotal_text": {
+      "type": "string"
+    },
+    "personal_information_mail": {
+      "type": "string"
+    },
+    "back_button": {
+      "type": "string"
+    },
+    "order_details_button_route": {
+      "type": "string"
+    },
+    "order_details_title": {
+      "type": "string"
+    },
+    "payment_button": {
+      "type": "string"
+    },
+    "order_details_customer": {
+      "type": "string"
+    },
+    "personal_information_button_route": {
+      "type": "string"
+    },
+    "back_button_route": {
+      "type": "string"
+    },
+    "payment_button_route": {
+      "type": "string"
+    },
+    "order_declined_title": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "personal_information_phone": {
+      "type": "string"
+    },
+    "personal_information_name": {
+      "type": "string"
+    },
+    "payment_title": {
+      "type": "string"
+    },
+    "order_back_button": {
+      "type": "string"
+    },
+    "background_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
