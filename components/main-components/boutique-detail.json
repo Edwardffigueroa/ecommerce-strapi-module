@@ -2,7 +2,8 @@
   "collectionName": "components_main_components_boutique_details",
   "info": {
     "name": "Boutique Detail",
-    "icon": "store"
+    "icon": "store",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -26,9 +27,6 @@
       ],
       "plugin": "upload",
       "required": false
-    },
-    "currency": {
-      "type": "string"
     },
     "Background_image": {
       "model": "file",

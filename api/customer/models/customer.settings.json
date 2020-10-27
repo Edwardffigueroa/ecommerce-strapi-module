@@ -1,24 +1,26 @@
 {
   "kind": "collectionType",
-  "collectionName": "clients",
+  "collectionName": "customers",
   "info": {
-    "name": "Clients"
+    "name": "customer",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": true
   },
   "attributes": {
     "name": {
       "type": "string"
     },
     "email": {
+      "type": "email"
+    },
+    "address": {
       "type": "string"
     },
     "phone": {
-      "type": "integer"
-    },
-    "address": {
       "type": "string"
     }
   }
