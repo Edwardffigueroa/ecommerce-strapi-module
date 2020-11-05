@@ -2,7 +2,8 @@
   "collectionName": "components_main_components_visit_details",
   "info": {
     "name": "Visit detail",
-    "icon": "bacon"
+    "icon": "bacon",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -30,15 +31,6 @@
     "button_route": {
       "type": "string"
     },
-    "features": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
-      "required": false
-    },
     "carousel": {
       "collection": "file",
       "via": "related",
@@ -56,6 +48,15 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "time": {
+      "type": "string"
+    },
+    "people": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
     }
   }
 }

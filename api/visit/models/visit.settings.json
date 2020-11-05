@@ -2,11 +2,13 @@
   "kind": "singleType",
   "collectionName": "visits",
   "info": {
-    "name": "Visit"
+    "name": "Visit",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": false
   },
   "attributes": {
     "component_name": {

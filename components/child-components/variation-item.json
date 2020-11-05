@@ -2,12 +2,14 @@
   "collectionName": "components_child_components_variation_items",
   "info": {
     "name": "Variation_item",
-    "icon": "check-square"
+    "icon": "check-square",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "Value": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }

@@ -10,7 +10,7 @@
     "price_text": {
       "type": "string"
     },
-    "add_to_card_button": {
+    "add_to_cart_button": {
       "type": "string"
     },
     "continue_button": {
@@ -18,15 +18,6 @@
     },
     "continue_button_route": {
       "type": "string"
-    },
-    "clothing_features": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
-      "required": false
     },
     "Background_image": {
       "model": "file",
@@ -36,6 +27,18 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "currency_symbol": {
+      "type": "string"
+    },
+    "recyclable_text": {
+      "type": "string"
+    },
+    "organic_text": {
+      "type": "string"
+    },
+    "handmade_text": {
+      "type": "string"
     }
   }
 }

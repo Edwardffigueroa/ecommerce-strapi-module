@@ -2,15 +2,18 @@
   "kind": "collectionType",
   "collectionName": "products",
   "info": {
-    "name": "Products"
+    "name": "Products",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": false
   },
   "attributes": {
     "name_en": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "slug": {
       "type": "string"
@@ -18,18 +21,17 @@
     "price": {
       "type": "decimal",
       "min": 0,
-      "default": 0
+      "default": 0,
+      "required": true
     },
     "images": {
       "collection": "file",
       "via": "related",
       "allowedTypes": [
-        "images",
-        "files",
-        "videos"
+        "images"
       ],
       "plugin": "upload",
-      "required": false
+      "required": true
     },
     "sale": {
       "type": "decimal",
@@ -37,10 +39,14 @@
       "min": 0
     },
     "stock": {
-      "type": "integer"
+      "type": "integer",
+      "min": 0,
+      "default": 0,
+      "required": true
     },
     "description_en": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
     "Product_variation": {
       "type": "component",
@@ -53,10 +59,12 @@
       "required": true
     },
     "name_fr": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "description_fr": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     }
   }
 }

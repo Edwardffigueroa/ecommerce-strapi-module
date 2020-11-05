@@ -26,6 +26,9 @@
       ],
       "required": true,
       "default": "eur"
+    },
+    "notification_email": {
+      "type": "email"
     }
   }
 }

@@ -2,20 +2,24 @@
   "collectionName": "components_main_components_product_variations",
   "info": {
     "name": "Product_variation",
-    "icon": "sitemap"
+    "icon": "sitemap",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "variation_name_en": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Variation_item": {
       "type": "component",
       "repeatable": true,
-      "component": "child-components.variation-item"
+      "component": "child-components.variation-item",
+      "required": true
     },
     "variation_name_fr": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }
