@@ -39,6 +39,9 @@
     },
     "handmade_text": {
       "type": "string"
+    },
+    "quantity_text": {
+      "type": "string"
     }
   }
 }

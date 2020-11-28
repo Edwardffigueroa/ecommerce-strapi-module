@@ -5,11 +5,44 @@
  * to customize this controller
  */
 
+const Stripe = require('stripe');
+
 module.exports = {
     async complete(ctx) {
+        const boutiqueInfo = await strapi.services.boutique.find(ctx.query);
+        console.log("general variables", boutiqueInfo)
 
+        // await strapi.plugins['email'].services.email.send({
+        //     to: 'saraltusa@gmail.com',
+        //     from: 'pasteldelaserre@gmail.com',
+        //     replyTo: 'pasteldelaserre@gmail.com',
+        //     subject: 'Use strapi email provider successfully',
+        //     text: 'Hello world!',
+        //     html: 'Hello world!',
+        // });
+
+        const emailTemplate = {
+            subject: 'Welcome',
+            text: `Welcome on mywebsite.fr!
+              Your account is now linked with:`,
+            html: `<h1>Welcome on mywebsite.fr!</h1>
+              <p>Your account is now linked with`,
+        };
+
+        await strapi.plugins.email.services.email.sendTemplatedEmail(
+            {
+                to: 'saraltusa@gmail.com',
+                // from: 'pasteldelaserre@gmail.com'
+            },
+            emailTemplate,
+            {
+                // user: _.pick(user, ['username', 'email', 'firstname', 'lastname']),
+            }
+        );
+
+        const stripe = new Stripe("sk_test_51Hgd7fLNYvKIoqTPkIH2mNKdKejM8RtB5v9IibydLaeLPbHau13RdFijqeUWdAZHzgHXASeLx8nModQhACjAxTvz00IqWuxTcf"); // get this id from database
         //validate products by id
-        const { products, customer } = ctx.request.body;
+        const { products, customer, payment } = ctx.request.body;
         const dbProducts = await strapi.services.products.find(ctx.query);
         let customerValidation = false;
         let productValidation = false;
@@ -96,6 +129,8 @@ module.exports = {
                 client_phone: customer.phone,
             }
 
+            //23.76
+            //100
 
             try {
 
@@ -113,22 +148,83 @@ module.exports = {
                 let { currency } = await strapi.services.boutique.find(ctx.query);
                 let order_status = orderCreated.order_status;
 
-                //send response
+                console.log("::::::::::::::::::order::::::::::::::", orderCreated);
+                //proccess payment
 
-                let orderResponse = {
-                    "code": 200,
-                    "order_id": orderId,
-                    "order_amount_currency": currency,
-                    "order_amount": orderAmount,
-                    "order_status": order_status,
-                    "message": "Order created successfully"
+                let amountParse = parseInt(orderAmount.toString().includes(".") ? orderAmount.toString().replace('.', "") : orderAmount.toString() + "00");
+
+                const paymentResponse = await stripe.paymentIntents.create({
+                    amount: amountParse,
+                    currency: currency,
+                    description: "Order id: " + orderId,
+                    payment_method: payment.id_card,
+                    confirm: true
+                })
+                console.log("orderAm", orderAmount)
+                console.log("parsed", amountParse)
+                console.log(paymentResponse)
+
+                if (paymentResponse.status == "succeeded") { //payment success
+                    //update order to APPROVED
+                    console.log("succeded");
+
+                    let orderUpdate = {
+                        payment_status: "SUCCESS",
+                        payment_id: paymentResponse.id,
+                        order_status: 'APPROVED'
+                    }
+
+                    let orderUpdated = await strapi.services.orders.update({ id: orderId }, orderUpdate);
+
+                    //send response to client with sucessfull
+
+                    let orderResponse = {
+                        "code": 200,
+                        "order_id": orderId,
+                        "order_status": orderUpdated.order_status,
+                        "message": "Payment successfully, check your email inbox to track your order"
+                    }
+
+                    //send response
+
+                    ctx.send(orderResponse)
+
+                    //notify to client and admin
+
+                } else { //payment rejected
+                    //update order to PAYMENT REJECTED
+
+                    let orderUpdate = {
+                        payment_status: 'PENDING',
+                        payment_id: paymentResponse.id,
+                        order_status: 'REJECTED'
+                    }
+
+                    let orderUpdated = await strapi.services.orders.update({ id: orderId }, orderUpdate);
+                    //send response to cliente with problems and message
+
+                    let orderResponse = {
+                        "code": 200,
+                        "order_id": orderId,
+                        "order_status": orderUpdated.order_status,
+                        "message": "Payment successfully, check your email inbox to track your order"
+                    }
+
+                    ctx.send(orderResponse)
                 }
 
-                ctx.send(orderResponse)
-
-
             } catch (err) {
+
                 console.error(err)
+
+                let orderResponseErr = {
+                    "code": 400,
+                    "order_status": "REJECTED",
+                    "message": { message: "There was a problem with you order, please check and try again: " + err }
+                }
+
+                ctx.send(orderResponseErr)
+
             }
         } else {
 
@@ -140,8 +236,6 @@ module.exports = {
 
             ctx.send(orderResponse2)
         }
-
-
     },
     async updatepayment(ctx) {
 

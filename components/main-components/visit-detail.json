@@ -31,15 +31,6 @@
     "button_route": {
       "type": "string"
     },
-    "carousel": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
-      "required": false
-    },
     "background_image": {
       "model": "file",
       "via": "related",

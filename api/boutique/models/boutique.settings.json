@@ -27,7 +27,16 @@
       "required": true,
       "default": "eur"
     },
-    "notification_email": {
+    "notification_email_sender": {
+      "type": "email"
+    },
+    "stripe_public_key": {
+      "type": "string"
+    },
+    "stripe_private_key": {
+      "type": "string"
+    },
+    "notification_email_receiver": {
       "type": "email"
     }
   }
