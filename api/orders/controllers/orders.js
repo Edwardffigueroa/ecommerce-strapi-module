@@ -28,17 +28,17 @@ module.exports = {
             html: `<h1>Welcome on mywebsite.fr!</h1>
               <p>Your account is now linked with`,
         };
-
-        await strapi.plugins.email.services.email.sendTemplatedEmail(
-            {
-                to: 'saraltusa@gmail.com',
-                // from: 'pasteldelaserre@gmail.com'
-            },
-            emailTemplate,
-            {
-                // user: _.pick(user, ['username', 'email', 'firstname', 'lastname']),
-            }
-        );
+        /*
+                await strapi.plugins.email.services.email.sendTemplatedEmail(
+                    {
+                        to: 'saraltusa@gmail.com',
+                        // from: 'pasteldelaserre@gmail.com'
+                    },
+                    emailTemplate,
+                    {
+                        // user: _.pick(user, ['username', 'email', 'firstname', 'lastname']),
+                    }
+                );*/
 
         const stripe = new Stripe("sk_test_51Hgd7fLNYvKIoqTPkIH2mNKdKejM8RtB5v9IibydLaeLPbHau13RdFijqeUWdAZHzgHXASeLx8nModQhACjAxTvz00IqWuxTcf"); // get this id from database
         //validate products by id

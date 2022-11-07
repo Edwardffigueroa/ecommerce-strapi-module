@@ -2,11 +2,13 @@
   "kind": "singleType",
   "collectionName": "checkouts",
   "info": {
-    "name": "Checkout"
+    "name": "Checkout",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": false
   },
   "attributes": {
     "component_name": {
